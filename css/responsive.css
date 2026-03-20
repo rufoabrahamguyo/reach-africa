@@ -1,0 +1,213 @@
+/* REACH AFRICA - Responsive Design */
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 2rem;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .split-layout {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+    
+    .two-column .image-collage {
+        order: -1;
+    }
+    
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .flow-diagram {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .flow-arrow {
+        transform: rotate(90deg);
+        margin: 0;
+    }
+}
+
+/* Mobile (< 768px) */
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: var(--white);
+        flex-direction: column;
+        padding: var(--spacing-lg);
+        transition: left 0.3s ease;
+        z-index: 999;
+        box-shadow: var(--shadow-lg);
+        align-items: stretch;
+        justify-content: flex-start;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu li {
+        border-bottom: 1px solid var(--neutral-200);
+    }
+    
+    .nav-menu .nav-link,
+    .nav-menu .btn {
+        display: block;
+        padding: 1rem;
+        margin: 0;
+        text-align: left;
+    }
+    
+    .nav-menu .btn {
+        margin-top: var(--spacing-sm);
+    }
+
+    .nav-more {
+        position: static;
+    }
+
+    .more-toggle {
+        width: 100%;
+        text-align: left;
+        padding: 1rem;
+        border-radius: 0;
+    }
+
+    .more-menu {
+        position: static;
+        display: none;
+        box-shadow: none;
+        border: none;
+        border-left: 2px solid var(--neutral-300);
+        border-radius: 0;
+        margin-left: 1rem;
+        padding: 0.25rem 0 0.25rem 0.5rem;
+        min-width: 0;
+    }
+
+    .nav-more.open .more-menu {
+        display: block;
+    }
+    
+    body.menu-open {
+        overflow: hidden;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2, .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .hero {
+        min-height: 85vh;
+    }
+
+    .hero-content {
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .hero-bottom {
+        position: relative;
+        bottom: auto;
+        margin-top: var(--spacing-lg);
+    }
+    
+    .values-grid,
+    .pillars-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .vision-card,
+    .mission-card {
+        padding: var(--spacing-md);
+    }
+    
+    .office-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-embed-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline {
+        padding-left: var(--spacing-sm);
+        margin-left: 0.5rem;
+    }
+    
+    .timeline-number {
+        left: calc(-0.5rem - 1.25rem);
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.65rem;
+    }
+}
+
+/* Small Mobile (< 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .hero-buttons .btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .logo-full {
+        display: none;
+    }
+    
+    .logo-text {
+        font-size: 1.25rem;
+    }
+    
+    .image-collage {
+        grid-template-columns: 1fr;
+    }
+}
