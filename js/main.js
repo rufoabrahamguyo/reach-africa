@@ -25,6 +25,9 @@ class MobileMenu {
 
         document.querySelectorAll('.nav-link, .nav-menu .btn').forEach(link => {
             link.addEventListener('click', () => {
+                if (link.classList.contains('more-toggle')) {
+                    return;
+                }
                 this.menuToggle.classList.remove('active');
                 this.navMenu.classList.remove('active');
                 document.body.classList.remove('menu-open');
